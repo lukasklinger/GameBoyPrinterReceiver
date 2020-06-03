@@ -3,5 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="libs/jSerialComm-2.6.2.jar"/>
+	<classpathentry kind="lib" path="libs/gameboy-camera-lib.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,6 +1,9 @@
 package printer;
 
+import image.ImageConverter;
+
 public class PrinterEmulator {
+	private ImageConverter converter = new ImageConverter();
 	private boolean receivingImage = false;
 	private String currImage = "";
 
@@ -15,15 +18,21 @@ public class PrinterEmulator {
 
 	private void startImage() {
 		receivingImage = true;
-		System.out.println("Starting Transfer.");
+		System.out.println("Starting transfer.");
 	}
 
 	private void finishImage() {
 		System.out.println("Transfer done.");
-
-		convertToByteArray(new String(currImage));
+		
+		convertImage();
+		
 		receivingImage = false;
 		currImage = "";
+	}
+	
+	private void convertImage() {
+		byte[] bytes = convertToByteArray(currImage);
+		converter.convertImage(bytes);
 	}
 
 	private void addData(String data) {
@@ -31,18 +40,15 @@ public class PrinterEmulator {
 			currImage += data + " ";
 	}
 
-	private void convertToByteArray(String data) {
+	private byte[] convertToByteArray(String data) {
 		String[] byteStrings = data.split(" ");
 		byte[] bytes = new byte[byteStrings.length];
 
-		// Conversion to bytes not working
 		for (int i = 0; i < byteStrings.length; i++) {
-			bytes[i] = (byte) ();
-			
 			bytes[i] = (byte) ((Character.digit(byteStrings[i].charAt(0), 16) << 4)
 					+ Character.digit(byteStrings[i].charAt(1), 16));
 		}
 
-		System.out.println(byteStrings[0]);
+		return bytes;
 	}
 }
