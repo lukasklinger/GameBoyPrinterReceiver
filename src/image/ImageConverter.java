@@ -32,7 +32,7 @@ public class ImageConverter {
 	 * @param bytes Non-{@code NULL} array of bytes in 2BPP format
 	 */
 	public void convertImage(byte[] bytes) {
-		if (Objects.isNull(bytes) || bytes.length > 1) {
+		if (Objects.isNull(bytes) || bytes.length < 1) {
 			System.out.println("Cannot convert empty image.");
 		} else {
 			System.out.println("Converting image.");

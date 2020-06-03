@@ -12,10 +12,11 @@ public class Main {
 		DataListener listener = new DataListener(emulator, connection);
 		
 		if(args.length != 1) {
-			System.out.println("No serial port given as parameter. Will try to autoconnect");
+			System.out.println("No serial port given as parameter. Will try to autoconnect.");
+			if(connection.connect(null, 115200)) System.out.println("Connected.");
+		} else {
+			if(connection.connect(args[0], 115200)) System.out.println("Connected.");
 		}
-		
-		if(connection.connect(args[0], 115200)) System.out.println("Connected.");
 		
 		connection.addDataListener(listener);
 		
