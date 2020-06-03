@@ -6,10 +6,18 @@ import com.fazecast.jSerialComm.SerialPortEvent;
 
 import printer.PrinterEmulator;
 
-public class DataListener implements SerialPortDataListener{
+/**
+ * This data listener can be attached to a serial port. Whenever new data is
+ * available, it retrieves a full line from the serial port and sends it to
+ * {@link PrinterEmulator}.
+ * 
+ * @author lukasklinger
+ *
+ */
+public class DataListener implements SerialPortDataListener {
 	private PrinterEmulator emulator;
 	private SerialTerminal connection;
-	
+
 	public DataListener(PrinterEmulator emulator, SerialTerminal connection) {
 		this.emulator = emulator;
 		this.connection = connection;
@@ -24,5 +32,5 @@ public class DataListener implements SerialPortDataListener{
 	public void serialEvent(SerialPortEvent arg0) {
 		emulator.receiveChunk(connection.receiveDataFromSerial());
 	}
-	
+
 }

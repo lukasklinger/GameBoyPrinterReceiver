@@ -12,7 +12,7 @@ import com.fazecast.jSerialComm.SerialPortInvalidPortException;
 /**
  * Serial connection adapter
  * 
- * @author lukas
+ * @author lukasklinger
  *
  */
 public class SerialTerminal {
@@ -65,7 +65,7 @@ public class SerialTerminal {
 	}
 
 	/**
-	 * To close the Serial port after code finishes
+	 * To close the serial port after code finishes
 	 */
 	public void close() {
 		serialPort.closePort();
@@ -119,6 +119,11 @@ public class SerialTerminal {
 		return line.trim().intern();
 	}
 	
+	/**
+	 * Add listener to serial port.
+	 * 
+	 * @param listener {@link SerialPortDataListener}
+	 */
 	public void addDataListener(SerialPortDataListener listener) {
 		serialPort.addDataListener(listener);
 	}
