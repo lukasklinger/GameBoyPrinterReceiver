@@ -29,10 +29,12 @@ Thank you to mofosyne and his Arduino GameBoy Printer Emulator (https://github.c
 
 * 1.0.0
     * First release
+* 1.0.1
+     * Updated Gameboy Camera Lib
 
 ## Meta
 
-lukasklinger – [@lukespccontrol](https://twitter.com/lukespccontrol) – [lukasklinger.com](https://lukasklinger.com)
+lukasklinger ï¿½ [@lukespccontrol](https://twitter.com/lukespccontrol) ï¿½ [lukasklinger.com](https://lukasklinger.com)
 
 [https://github.com/lukasklinger](https://github.com/lukasklinger/)
 
