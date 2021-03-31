@@ -32,7 +32,7 @@ public class PrinterEmulator {
 			startImage();
 		if (chunk.contains("\"command\":\"PRNT\""))
 			finishImage();
-		if (!chunk.startsWith("#") && !chunk.startsWith("!"))
+		if (!chunk.startsWith("//") && !chunk.startsWith("{") && !chunk.startsWith("!") && !chunk.startsWith("#"))
 			addData(chunk);
 	}
 

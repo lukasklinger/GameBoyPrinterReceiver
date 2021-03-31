@@ -6,9 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/contains-technical-debt.svg)](https://forthebadge.com)
 
 This small Java application connects to a GameBoy Printer Emulator (see https://github.com/mofosyne/arduino-gameboy-printer-emulator) and waits for images. Once you print an image from your GameBoy Camera, the app will decode the image and save it to your computer as a PNG at a resolution of 160 by 144 pixels. This application runs in the command line and has no GUI.
-
-## Important Note
-Currently, this Java application only works with GameBoy Printer Emulator V1 and V2. I will update thie repository in the future to support V3.
+It has been updated for V3 of the GameBoy Printer Emulator.
 
 ## Installation
 
