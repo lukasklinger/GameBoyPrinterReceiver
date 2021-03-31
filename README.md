@@ -32,6 +32,8 @@ Thank you to mofosyne and his Arduino GameBoy Printer Emulator (https://github.c
     * First release
 * 1.0.1
      * Updated Gameboy Camera Lib
+* 1.1.0
+     * Support for GameBoy Printer Emulator V3
 
 ## Meta
 
